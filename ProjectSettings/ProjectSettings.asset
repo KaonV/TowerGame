@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 93e1f32a69534514e9067cc37785195e
+  productGUID: fa81198e1fad16b46974362dca995618
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -854,7 +854,7 @@ PlayerSettings:
   cloudProjectId: d7e63282-782d-43a1-b70d-19ca561e36f5
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
+  projectName: TowerGame 2024-10-17_19-26-42
   organizationId: kauaribeirodev
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1

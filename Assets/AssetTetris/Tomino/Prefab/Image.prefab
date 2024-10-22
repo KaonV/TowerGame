@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.078431375, g: 0.21568628, b: 0.3529412, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -105,3 +105,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   themeProvider: {fileID: 11400000, guid: f986fc615d5af435ca420b0435fb1eb3, type: 2}
   image: {fileID: 1395189070548854550}
+  colorName: 0
