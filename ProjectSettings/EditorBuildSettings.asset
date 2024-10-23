@@ -6,7 +6,25 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MenuPrincipal.unity
+    guid: 43621c84c9d29f246b040549d9a1f5bf
+  - enabled: 1
+    path: Assets/Scenes/CriarSala.unity
+    guid: 6c25bed16ab394349a323f1ab18df084
+  - enabled: 1
+    path: Assets/Scenes/EntrarEmSala.unity
+    guid: 25526e44981ee184388bfb34bda6f69a
+  - enabled: 1
+    path: "Assets/Scenes/Op\xE7oes.unity"
+    guid: 6134db7ddb7788b4190daef99ca6fbf8
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 6e1b47afc7dd3e34e83f44e12c767788
+  - enabled: 1
     path: Assets/Scenes/TestesAulasIrrelevante.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/TesteEditarAqui.unity
+    guid: e1eaa22ffa98f0e4b8c26eff99bfabf0
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
