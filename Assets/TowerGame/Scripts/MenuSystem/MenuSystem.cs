@@ -5,6 +5,16 @@ using UnityEngine.Events;
 
 public class MenuSystem : MonoBehaviour
 {
+    #region - Singleton Pattern -
+    public static MenuSystem Instance;
+    private void Awake()
+    {
+        if (Instance != null)
+            Destroy(Instance.gameObject);
+        Instance = this;
+    }
+    #endregion
+
     [SerializeField] private List<MenuData> _menus        = new List<MenuData>();
     [SerializeField] private MenuData       _currentMenu  = null;
     private MenuData       _lastMenu     = null;

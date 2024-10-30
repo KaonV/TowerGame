@@ -620,10 +620,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 709580014}
-        m_TargetAssemblyTypeName: PhotonManager, Assembly-CSharp
-        m_MethodName: LeaveCurrentRoom
-        m_Mode: 1
+      - m_Target: {fileID: 1990517212}
+        m_TargetAssemblyTypeName: MenuSystem, Assembly-CSharp
+        m_MethodName: OpenMenu
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1125,8 +1125,6 @@ GameObject:
   m_Component:
   - component: {fileID: 709580015}
   - component: {fileID: 709580014}
-  - component: {fileID: 709580013}
-  - component: {fileID: 709580012}
   m_Layer: 0
   m_Name: PhotonManager
   m_TagString: Untagged
@@ -1134,30 +1132,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &709580012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 709580011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8edbe7108d8a43ab838cf8b8d9453df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &709580013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 709580011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1199893898, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &709580014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1172,9 +1146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _menuSystem: {fileID: 1990517212}
   _runner: {fileID: 0}
-  sceneNameToLoad: Gameplay
-  _playerPrefab:
-    RawGuidValue: 00000000000000000000000000000000
+  _sceneNameToLoad: Gameplay
 --- !u!4 &709580015
 Transform:
   m_ObjectHideFlags: 0
