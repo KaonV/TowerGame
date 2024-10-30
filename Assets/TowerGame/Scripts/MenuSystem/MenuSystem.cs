@@ -5,9 +5,9 @@ using UnityEngine.Events;
 
 public class MenuSystem : MonoBehaviour
 {
-    [SerializeField] private List<MenuData> _menus  = new List<MenuData>();
-    [SerializeField] private MenuData _currentMenu  = null;
-    [SerializeField] private MenuData _lastMenu     = null;
+    [SerializeField] private List<MenuData> _menus        = new List<MenuData>();
+    [SerializeField] private MenuData       _currentMenu  = null;
+    private MenuData       _lastMenu     = null;
 
     private void Start()
     {
@@ -21,13 +21,13 @@ public class MenuSystem : MonoBehaviour
 
         if (data != null)
         {
+            if (_currentMenu != null)
+                _lastMenu = _currentMenu;
             if (_lastMenu != null)
                 _lastMenu.ChangeState(false);
-            _lastMenu = _currentMenu;
-
-            data.ChangeState(true);
 
             _currentMenu = data;
+            _currentMenu.ChangeState(true);
         }
     }
 
@@ -43,20 +43,25 @@ public class MenuData
     public string       tag         = string.Empty;
     public GameObject   panel       = null;
     public UnityEvent   onActivate  = null;
-    public float        duration    = 1f;
-    public CanvasGroup  cg          = null;
+
+    private CanvasGroup  cg          = null;
 
     public CanvasGroup Cg
     {
         get
         {
-            if (!panel.GetComponent<CanvasGroup>())
+            if (cg == null)
             {
-                cg = panel.AddComponent<CanvasGroup>();
-                return cg;
+                if (panel == null)
+                {
+                    Debug.Log("Panel is null!");
+                    return null;
+                }
+
+                if (panel.GetComponent<CanvasGroup>())
+                    return cg = panel.GetComponent<CanvasGroup>();
+                else return cg = panel.AddComponent<CanvasGroup>();
             }
-            else if (cg == null)
-                return cg = panel.GetComponent<CanvasGroup>();
             else return cg;
         }
     }
