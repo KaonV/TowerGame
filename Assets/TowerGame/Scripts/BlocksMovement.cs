@@ -15,32 +15,30 @@ public class BlocksMovement : NetworkBehaviour
     public override void FixedUpdateNetwork()
     {
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.RightArrow) && _canMove)
             {
                 MoveBlock(Vector2.right);
                 Debug.Log("indo pra direita");
             }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            else if (Input.GetKeyDown(KeyCode.LeftArrow) && _canMove)
             {
                 MoveBlock(Vector2.left);
                 Debug.Log("indo pra esquerda");
             }
 
-            else if (Input.GetKeyDown(KeyCode.UpArrow))
+            else if (Input.GetKeyDown(KeyCode.UpArrow) && _canMove)
             {
                 RotateBlock(90f);
                 Debug.Log("Rotacionando 90 graus");
             }
 
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            else if (Input.GetKeyDown(KeyCode.DownArrow) && _canMove)
             {
                 MoveBlock(Vector2.down);
-                Debug.Log("Rotacionando 90 graus");
+                Debug.Log("Descendo");
             }
         }
     }
-
-
 
     private void MoveBlock(Vector2 direction)
     {
@@ -54,7 +52,7 @@ public class BlocksMovement : NetworkBehaviour
         _controller.MoveRotation(_controller.rotation + angle);
     }
 
-    /*private void OnCollisionEnter2D(Collision2D collision)
+    private void OnColisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
@@ -62,5 +60,5 @@ public class BlocksMovement : NetworkBehaviour
             Debug.Log("Movimento desativado devido à colisão com o chão");
         }
     }
-    */
+    
 }
