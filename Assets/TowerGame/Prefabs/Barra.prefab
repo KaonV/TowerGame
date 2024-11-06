@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4063127327865968106}
   - component: {fileID: 4840828964050202672}
   - component: {fileID: -1572915651005455473}
+  - component: {fileID: -2366922354499286258}
   m_Layer: 5
   m_Name: Barra
   m_TagString: Untagged
@@ -131,6 +132,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 6937152374224038362}
   - {fileID: -1572915651005455473}
+  - {fileID: -2366922354499286258}
 --- !u!61 &4063127327865968106
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -217,3 +219,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveDistance: 30
+--- !u!114 &-2366922354499286258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535682805693469161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551d7665009e8f842813f632f771d6a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brickTypes:
+  - {fileID: 535682805693469161, guid: 0319798da506796408dae6c9300c4298, type: 3}
+  - {fileID: 535682805693469161, guid: a9b677eccd0ff5c47b1b48bcb9bbf41e, type: 3}
+  - {fileID: 535682805693469161, guid: 2b52bc96a16bd46419105c81a26fdd99, type: 3}
+  - {fileID: 535682805693469161}
+  - {fileID: 535682805693469161, guid: f645949f542cd154696e33fba6076ed4, type: 3}

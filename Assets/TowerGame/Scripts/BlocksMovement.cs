@@ -6,10 +6,17 @@ public class BlocksMovement : NetworkBehaviour
 {
     private Rigidbody2D _controller;
     [SerializeField] private float _moveDistance = 30f;
-    private bool _canMove = true;
+    private bool _canMove;
+    private bool _canScore;
+    private KauaGameManager _gameManager;
     private void Awake()
     {
         _controller = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        _canMove = true;
     }
 
     public override void FixedUpdateNetwork()
@@ -44,7 +51,7 @@ public class BlocksMovement : NetworkBehaviour
     {
         // Movimenta o bloco na direção especificada
         _controller.MovePosition(_controller.position + direction * _moveDistance);
-    }
+    }  
 
     private void RotateBlock(float angle)
     {
@@ -52,13 +59,24 @@ public class BlocksMovement : NetworkBehaviour
         _controller.MoveRotation(_controller.rotation + angle);
     }
 
-    private void OnColisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            _canMove = false; // Desativa o movimento ao colidir com o objeto de tag "Ground"
+            _canMove = false;
             Debug.Log("Movimento desativado devido à colisão com o chão");
         }
+
+        else if (collision.gameObject.CompareTag("Ground") && !_canMove)
+        {
+            //nada por enquanto...
+        }
+
+        else if (collision.gameObject.CompareTag("Ground") && _canScore)
+        {
+            _gameManager?.IncrementScore();
+            _canScore = false;
+
+        }
     }
-    
 }

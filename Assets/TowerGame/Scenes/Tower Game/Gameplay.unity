@@ -700,6 +700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1398129397}
   - component: {fileID: 1398129398}
+  - component: {fileID: 1398129400}
   - component: {fileID: 1398129399}
   m_Layer: 0
   m_Name: BricksSpawner
@@ -759,6 +760,20 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 1398129398}
+  - {fileID: 1398129400}
+--- !u!114 &1398129400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398129396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef49caeff537c2d4c98b62ca4c6e7e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreCounter: 0
 --- !u!1 &1451675900
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,10 +990,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2896078183534112089, guid: 0319798da506796408dae6c9300c4298,
+        type: 3}
+      propertyPath: 'brickTypes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 535682805693469161, guid: 0319798da506796408dae6c9300c4298,
+        type: 3}
+    - target: {fileID: 4840828964050202672, guid: 0319798da506796408dae6c9300c4298,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4840828964050202672, guid: 0319798da506796408dae6c9300c4298,
         type: 3}
       propertyPath: m_GravityScale
-      value: 1.5
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840828964050202672, guid: 0319798da506796408dae6c9300c4298,
+        type: 3}
+      propertyPath: m_LinearDamping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4840828964050202672, guid: 0319798da506796408dae6c9300c4298,
         type: 3}
