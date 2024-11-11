@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4103081311395516090}
   m_Layer: 5
   m_Name: T
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,17 +170,17 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 8.210171, y: -0.4781041}
-  - {x: 8.168432, y: 5.719984}
-  - {x: -8.195306, y: 5.6986556}
-  - {x: -8.244344, y: -0.404845}
+  - {x: 7.827047, y: -0.38969082}
+  - {x: 7.6379523, y: 5.5431576}
+  - {x: -7.664826, y: 5.580771}
+  - {x: -7.62545, y: -0.3753727}
   - {x: -3.116926, y: -0.4271176}
   - {x: -3.116926, y: -0.4271176}
-  - {x: -3.116926, y: -0.4271176}
-  - {x: -3.171202, y: -5.566183}
-  - {x: 3.158525, y: -5.6026945}
-  - {x: 3.1992996, y: -0.47395056}
-  - {x: 8.213171, y: -0.4655096}
+  - {x: -2.627644, y: -0.4271176}
+  - {x: -2.5351353, y: -5.3460064}
+  - {x: 2.59585, y: -5.3580537}
+  - {x: 2.5632331, y: -0.32716593}
+  - {x: 7.7711053, y: -0.4655096}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2f7a25a08837341b462dd169ff6351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveDistance: 30
+  _moveDistance: 45
 --- !u!50 &4698335157841985801
 Rigidbody2D:
   serializedVersion: 5
@@ -212,8 +212,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0.8
+  m_AngularDamping: 0
+  m_GravityScale: 8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -243,3 +243,5 @@ MonoBehaviour:
   - {fileID: 535682805693469161, guid: 2b52bc96a16bd46419105c81a26fdd99, type: 3}
   - {fileID: 535682805693469161, guid: e6f7fad659aee7349a880ef0da613819, type: 3}
   - {fileID: 535682805693469161, guid: f645949f542cd154696e33fba6076ed4, type: 3}
+  _currentBlock: 0
+  lifes: 0

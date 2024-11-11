@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2896078183534112089}
   m_Layer: 5
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,8 +193,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0.8
+  m_AngularDamping: 0
+  m_GravityScale: 8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2f7a25a08837341b462dd169ff6351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveDistance: 30
+  _moveDistance: 45
 --- !u!114 &2896078183534112089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,3 +237,5 @@ MonoBehaviour:
   - {fileID: 535682805693469161, guid: 2b52bc96a16bd46419105c81a26fdd99, type: 3}
   - {fileID: 535682805693469161, guid: e6f7fad659aee7349a880ef0da613819, type: 3}
   - {fileID: 535682805693469161, guid: f645949f542cd154696e33fba6076ed4, type: 3}
+  _currentBlock: 0
+  lifes: 0
