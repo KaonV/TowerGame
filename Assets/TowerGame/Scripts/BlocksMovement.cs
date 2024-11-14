@@ -67,9 +67,14 @@ public class BlocksMovement : NetworkBehaviour
             Debug.Log("Movimento desativado devido à colisão com o chão");
         }
 
+        else if (collision.gameObject.CompareTag("Bricks"))
+        {
+            _canMove = false;
+        }
+
         else if (collision.gameObject.CompareTag("Ground") && !_canMove)
         {
-            //nada por enquanto...
+            //nada por enquanto, adicionar contagem em breve 
         }
 
         else if (collision.gameObject.CompareTag("Ground") && _canScore)

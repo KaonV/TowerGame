@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Limits
+  - Bricks
   layers:
   - Default
   - TransparentFX

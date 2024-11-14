@@ -8,7 +8,7 @@ public class RandomSpawner : NetworkBehaviour
     [SerializeField] private int lifes;
 
     public void Start()
-    {
+    {                                            
         _currentBlock = true;
         lifes = 3;
     }
