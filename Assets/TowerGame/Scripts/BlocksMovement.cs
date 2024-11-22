@@ -4,10 +4,10 @@ using UnityEngine.UIElements;
 
 public class BlocksMovement : NetworkBehaviour
 {
-    private Rigidbody2D _controller;
+     private Rigidbody2D _controller { get; set;}
     [SerializeField] private float _moveDistance = 30f;
-    private bool _canMove;
-    private bool _canScore;
+    private bool _canMove { get; set; }
+    private bool _canScore { get; set; }
     private KauaGameManager _gameManager;
     private void Awake()
     {

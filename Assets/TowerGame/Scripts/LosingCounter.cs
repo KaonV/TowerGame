@@ -1,11 +1,14 @@
 using Fusion;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 public class LosingCounter : NetworkBehaviour
 {
     private int vidas;
-    [SerializeField] private GameObject telaDerrota;
+    public string _sceneName = "GameScene";
+    public NetworkRunner _runnerGameplay = null;
+
 
     private void Start()
     {
@@ -14,11 +17,7 @@ public class LosingCounter : NetworkBehaviour
 
     private void Update()
     {
-        if (vidas <= 0)
-        {
-            Debug.Log("acabou :(");
-            telaDerrota.SetActive(true);
-        }
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void OnCollisionEnter2D(Collision2D collision)
@@ -27,7 +26,15 @@ public class LosingCounter : NetworkBehaviour
         {
             Destroy(collision.gameObject);
             vidas--;
-            Debug.Log("-1 vida");
+        }
+    }
+
+    private void Derrota()
+    {
+        if (vidas <= 0)
+        {
+            Debug.Log("acabou :(");
+            _runnerGameplay.LoadScene(_sceneName);
         }
     }
 }

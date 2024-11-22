@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TowerGame/Scenes/Tower Game/Gameplay.unity
     guid: 15a1be609e240d847a5baca4007d0063
+  - enabled: 1
+    path: Assets/TowerGame/Scenes/Tower Game/Lose.unity
+    guid: 8a18d8bef2e39dc458ce52ef34151e63
+  - enabled: 1
+    path: Assets/TowerGame/Scenes/Tower Game/Win.unity
+    guid: d6b789a43bd645241a946885b87a756f
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
