@@ -9,6 +9,8 @@ public class BlocksMovement : NetworkBehaviour
     private bool _canMove { get; set; }
     private bool _canScore { get; set; }
     private KauaGameManager _gameManager;
+    [SerializeField] private Vector2 moveVector;
+    [SerializeField] private bool processMove = false;
     private void Awake()
     {
         _controller = GetComponent<Rigidbody2D>();
@@ -19,32 +21,67 @@ public class BlocksMovement : NetworkBehaviour
         _canMove = true;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.RightArrow) && _canMove)
+        {
+            moveVector = Vector2.right;
+            processMove = true;
+            Debug.Log("indo pra direita");
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && _canMove)
+        {
+            moveVector = Vector2.left;
+            processMove = true;
+            Debug.Log("indo pra esquerda");
+        }
+
+        else if (Input.GetKeyDown(KeyCode.UpArrow) && _canMove)
+        {
+            RotateBlock(90f);
+            Debug.Log("Rotacionando 90 graus");
+        }
+
+        else if (Input.GetKeyDown(KeyCode.DownArrow) && _canMove)
+        {
+            MoveBlock(Vector2.down);
+            Debug.Log("Descendo");
+        }
+    }
+
     public override void FixedUpdateNetwork()
     {
+        if (!_canMove) return;
+        if (processMove && moveVector != Vector2.zero)
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow) && _canMove)
-            {
-                MoveBlock(Vector2.right);
-                Debug.Log("indo pra direita");
-            }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow) && _canMove)
-            {
-                MoveBlock(Vector2.left);
-                Debug.Log("indo pra esquerda");
-            }
-
-            else if (Input.GetKeyDown(KeyCode.UpArrow) && _canMove)
-            {
-                RotateBlock(90f);
-                Debug.Log("Rotacionando 90 graus");
-            }
-
-            else if (Input.GetKeyDown(KeyCode.DownArrow) && _canMove)
-            {
-                MoveBlock(Vector2.down);
-                Debug.Log("Descendo");
-            }
+            MoveBlock(moveVector);
+            processMove = false;
+            moveVector = Vector2.zero;
         }
+        //{
+        //    if (Input.GetKeyDown(KeyCode.RightArrow) && _canMove)
+        //    {
+        //        MoveBlock(Vector2.right);
+        //        Debug.Log("indo pra direita");
+        //    }
+        //    else if (Input.GetKeyDown(KeyCode.LeftArrow) && _canMove)
+        //    {
+        //        MoveBlock(Vector2.left);
+        //        Debug.Log("indo pra esquerda");
+        //    }
+
+        //    else if (Input.GetKeyDown(KeyCode.UpArrow) && _canMove)
+        //    {
+        //        RotateBlock(90f);
+        //        Debug.Log("Rotacionando 90 graus");
+        //    }
+
+        //    else if (Input.GetKeyDown(KeyCode.DownArrow) && _canMove)
+        //    {
+        //        MoveBlock(Vector2.down);
+        //        Debug.Log("Descendo");
+        //    }
+        //}
     }
 
     private void MoveBlock(Vector2 direction)
