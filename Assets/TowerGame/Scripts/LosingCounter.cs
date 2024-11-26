@@ -1,7 +1,6 @@
 using Fusion;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Video;
 
 public class LosingCounter : NetworkBehaviour
 {
@@ -14,17 +13,12 @@ public class LosingCounter : NetworkBehaviour
     {
         vidas = 3;
     }
-
-    private void Update()
-    {
-
-    }
-    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bricks"))
         {
-            Destroy(collision.gameObject);
+            Debug.Log("entrou aqui");
+            Runner.Despawn(collision.gameObject.GetComponent<NetworkObject>());
             vidas--;
             Derrota();
         }
@@ -34,8 +28,12 @@ public class LosingCounter : NetworkBehaviour
     {
         if (vidas <= 0)
         {
-            Debug.Log("acabou :(");
-            _runnerGameplay.LoadScene(_sceneName);
+            if (Runner.IsSceneAuthority)
+            {
+                Debug.Log("acabou :(");
+                var scene = SceneRef.FromIndex(2);
+                var x = Runner.LoadScene(scene);
+            }
         }
     }
 }
