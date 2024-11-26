@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3129682363429547288}
   m_Layer: 5
   m_Name: Escada
-  m_TagString: Ground
+  m_TagString: Bricks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,7 +238,6 @@ MonoBehaviour:
   - {fileID: 535682805693469161, guid: 2b52bc96a16bd46419105c81a26fdd99, type: 3}
   - {fileID: 535682805693469161, guid: e6f7fad659aee7349a880ef0da613819, type: 3}
   - {fileID: 535682805693469161}
-  __currentBlock: 0
   lifes: 0
 --- !u!61 &3129682363429547288
 BoxCollider2D:

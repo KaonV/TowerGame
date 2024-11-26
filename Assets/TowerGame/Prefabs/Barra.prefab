@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -2366922354499286258}
   m_Layer: 5
   m_Name: Barra
-  m_TagString: Ground
+  m_TagString: Bricks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,5 +237,4 @@ MonoBehaviour:
   - {fileID: 535682805693469161, guid: 2b52bc96a16bd46419105c81a26fdd99, type: 3}
   - {fileID: 535682805693469161}
   - {fileID: 535682805693469161, guid: f645949f542cd154696e33fba6076ed4, type: 3}
-  __currentBlock: 0
   lifes: 0
