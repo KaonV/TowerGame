@@ -147,6 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveDistance: 75
+  moveVector: {x: 0, y: 0}
+  processMove: 0
 --- !u!50 &-1856517576339482073
 Rigidbody2D:
   serializedVersion: 5
@@ -235,10 +237,8 @@ MonoBehaviour:
   brickTypes:
   - {fileID: 535682805693469161, guid: 0319798da506796408dae6c9300c4298, type: 3}
   - {fileID: 535682805693469161, guid: a9b677eccd0ff5c47b1b48bcb9bbf41e, type: 3}
-  - {fileID: 535682805693469161, guid: 2b52bc96a16bd46419105c81a26fdd99, type: 3}
   - {fileID: 535682805693469161, guid: e6f7fad659aee7349a880ef0da613819, type: 3}
   - {fileID: 535682805693469161}
-  lifes: 0
 --- !u!61 &3129682363429547288
 BoxCollider2D:
   m_ObjectHideFlags: 0

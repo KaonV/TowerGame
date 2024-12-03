@@ -1355,6 +1355,7 @@ MonoBehaviour:
   _menuSystem: {fileID: 1990517212}
   _runner: {fileID: 0}
   _sceneNameToLoad: Gameplay
+  currentTurnIndex: 0
 --- !u!4 &709580015
 Transform:
   m_ObjectHideFlags: 0

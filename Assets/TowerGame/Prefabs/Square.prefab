@@ -219,6 +219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveDistance: 75
+  moveVector: {x: 0, y: 0}
+  processMove: 0
 --- !u!114 &2896078183534112089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +236,5 @@ MonoBehaviour:
   brickTypes:
   - {fileID: 535682805693469161}
   - {fileID: 535682805693469161, guid: a9b677eccd0ff5c47b1b48bcb9bbf41e, type: 3}
-  - {fileID: 535682805693469161, guid: 2b52bc96a16bd46419105c81a26fdd99, type: 3}
   - {fileID: 535682805693469161, guid: e6f7fad659aee7349a880ef0da613819, type: 3}
   - {fileID: 535682805693469161, guid: f645949f542cd154696e33fba6076ed4, type: 3}
-  lifes: 0

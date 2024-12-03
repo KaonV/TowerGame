@@ -19,6 +19,7 @@ public class RandomSpawner : NetworkBehaviour
             int randomIndex = Random.Range(0, brickTypes.Length);
             Vector3 SpawnPosition = new Vector3(-30, 604, 0);
             _currentBlock = false;
+            PhotonManager.Instance.NextTurn();
             Runner.Spawn(brickTypes[randomIndex], SpawnPosition, Quaternion.identity);
         }
 
@@ -28,6 +29,7 @@ public class RandomSpawner : NetworkBehaviour
             int randomIndex = Random.Range(0, brickTypes.Length);
             Vector3 SpawnPosition = new Vector3(-30, 604, 0);
             _currentBlock = false;
+            PhotonManager.Instance.NextTurn();
             Runner.Spawn(brickTypes[randomIndex], SpawnPosition, Quaternion.identity);
         }
 
@@ -37,6 +39,7 @@ public class RandomSpawner : NetworkBehaviour
             int randomIndex = Random.Range(0, brickTypes.Length);
             Vector3 SpawnPosition = new Vector3(-30, 604, 0);
             _currentBlock = false;
+            PhotonManager.Instance.NextTurn();
             Runner.Spawn(brickTypes[randomIndex], SpawnPosition, Quaternion.identity);
         }
 

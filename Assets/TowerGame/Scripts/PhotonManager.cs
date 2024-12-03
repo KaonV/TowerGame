@@ -25,7 +25,7 @@ public class PhotonManager : MonoBehaviour, INetworkRunnerCallbacks
     [SerializeField] private string         _sceneNameToLoad = "GameScene"; // Replace with your scene name
 
     private List<PlayerRef> playersInRoom    = new List<PlayerRef>(); // Referências dos jogadores
-    private int             currentTurnIndex = 0;                     // Índice do jogador com o turno atual
+    public int             currentTurnIndex = 0;                     // Índice do jogador com o turno atual
     private float           turnDuration     = 10f;                   // Duração do turno em segundos
     private float           turnTimer        = 0f;
 
@@ -57,7 +57,7 @@ public class PhotonManager : MonoBehaviour, INetworkRunnerCallbacks
     {
         if (playersInRoom.Count >= 2) // Inicia o sistema de turnos se houver pelo menos 2 jogadores
         {
-            HandleTurnSystem();
+            //HandleTurnSystem();
         }
     }
 
@@ -73,7 +73,7 @@ public class PhotonManager : MonoBehaviour, INetworkRunnerCallbacks
         }
     }
 
-    private void NextTurn()
+    public void NextTurn()
     {
         // Alterna para o próximo jogador
         currentTurnIndex = (currentTurnIndex + 1) % playersInRoom.Count;
@@ -116,7 +116,7 @@ public class PhotonManager : MonoBehaviour, INetworkRunnerCallbacks
         // Tentar encontrar uma sala aleatória como cliente
         var startGameArgs = new StartGameArgs
         {
-            GameMode = GameMode.AutoHostOrClient,
+            GameMode = GameMode.Shared,
             SessionName = "",  // Deixar em branco para procurar qualquer sala disponível
             Scene = sceneInfo,
             SceneManager = gameObject.AddComponent<NetworkSceneManagerDefault>()
