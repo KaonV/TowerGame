@@ -23,11 +23,11 @@ public class BlocksMovement : NetworkBehaviour
 
     private void Update()
     {
-        if (Runner.LocalPlayer.AsIndex - 1 != PhotonManager.Instance.currentTurnIndex)
+        /*if (Runner.LocalPlayer.AsIndex - 1 != PhotonManager.Instance.currentTurnIndex)
         {
             Debug.Log($"Player atual: {Runner.LocalPlayer.AsIndex} / Turno: {PhotonManager.Instance.currentTurnIndex}");
             return;
-        }
+        }*/
 
         if (Input.GetKeyDown(KeyCode.RightArrow) && _canMove)
         {

@@ -132,7 +132,7 @@ public class PhotonManager : MonoBehaviour, INetworkRunnerCallbacks
         {
             Debug.LogWarning("Nenhuma sala encontrada, criando uma nova como host...");
 
-            startGameArgs.GameMode = GameMode.Host;
+            startGameArgs.GameMode = GameMode.Shared;
             startGameArgs.SessionName = "Sala_" + Guid.NewGuid(); // Nome único para a nova sala
 
             result = await _runner.StartGame(startGameArgs);
