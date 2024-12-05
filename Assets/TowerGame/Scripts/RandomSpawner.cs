@@ -13,6 +13,8 @@ public class RandomSpawner : NetworkBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+
         if (collision.gameObject.CompareTag("Ground") && _currentBlock)             
         {
             Debug.Log("Colidiu");
@@ -41,11 +43,6 @@ public class RandomSpawner : NetworkBehaviour
             _currentBlock = false;
             PhotonManager.Instance.NextTurn();
             Runner.Spawn(brickTypes[randomIndex], SpawnPosition, Quaternion.identity);
-        }
-
-        else if (collision.gameObject.CompareTag("Limits"))
-        {
-            Debug.Log("-1 vida");
         }
     }
 }
